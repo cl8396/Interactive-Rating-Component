@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet"> 
-  
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Interactive rating component</title>
 
 </head>
+
 <body>
 
   <main class="rating-card">
     <!-- Rating state start -->
     <div class="rating-state" data-active="true">
-          <h2 class="rating-state__header">How did we do?</h2>
+
+      <img src="images/icon-star.svg" class="rating-state__icon"></img>
+
+      <h2 class="rating-state__header">How did we do?</h2>
       
-          <p class="rating-state__text" >Please let us know how we did with your support request. All feedback is appreciated
-          to help us improve our offering!</p>
-      
-          <button type="button" class="rating-score-btn">1</button>
-          <button type="button" class="rating-score-btn">2</button>
-          <button type="button" class="rating-score-btn">3</button>
-          <button type="button" class="rating-score-btn">4</button>
-          <button type="button" class="rating-score-btn">5</button>
-      
-          <button type="button" class="btn">Submit</button>
+      <p class="rating-state__text">Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+      <div class="rating-state__buttons flex">
+        <input class="hidden" type="radio" name="rating-score" id="1" value="1">
+        <label for="1" class="rating-state__btn">1</label>
+        <input class="hidden" type="radio" name="rating-score" id="2" value="2">
+        <label for="2" class="rating-state__btn">2</label>
+        <input class="hidden" type="radio" name="rating-score" id="3" value="3">
+        <label for="3" class="rating-state__btn">3</label>
+        <input class="hidden" type="radio" name="rating-score" id="4" value="4">
+        <label for="4" class="rating-state__btn">4</label>
+        <input class="hidden" type="radio" name="rating-score" id="5" value="5">
+        <label for="5" class="rating-state__btn">5</label>
+      </div>
+      <button type="button" class="btn btn--clr-primary-200 js-submit-button">Submit</button>
     </div>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
     <div class="thank-you-state" data-active="false">
-      <p>You selected<span class="rating-score"></span>out of 5</p>
+      <p>You selected <span class="rating-score-span"></span> out of 5</p>
       <h2>Thank you!</h2>
       <p>We appreciate you taking the time to give a rating. If you ever need more support,
-      don’t hesitate to get in touch!</p>
+        don’t hesitate to get in touch!</p>
     </div>
 
     <!-- Thank you state end -->
   </main>
+  <script src="index.js"></script>
 </body>
+
 </html>
