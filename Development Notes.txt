@@ -1,0 +1,5 @@
+What heading level selector to use? As it is a standalone component out of the context of a webpage
+Do I place a single h1 on the rating state and not the thank you state? Perhaps a h2 on both headers is suitable.
+
+I am going to use data attributes of (data-active="false" and data-active="true") to toggle the contents of 
+the rating card.
