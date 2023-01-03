@@ -10,7 +10,7 @@ const ratingButtons = document.querySelectorAll('input[name="rating-score"]');
 
 function submitRating() {
     if (document.querySelector('input[name="rating-score"]:checked') === null) { /* ensures a score is selected */
-        alert('please select a score, twat');
+        alert('please select a score');
         return;
     } 
     updateRatingText()

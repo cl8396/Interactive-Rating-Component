@@ -79,6 +79,10 @@ h6 {
   display: none;
 }
 
+.margin-auto {
+  margin: 0 auto;
+}
+
 body {
   font-family: 'Overpass', sans-serif;
   font-size: 0.975rem;
@@ -89,6 +93,8 @@ body {
   background-color: black;
 
 }
+
+/* RATING STATE STYLINGS */
 
 .rating-card {
   padding: 2rem;
@@ -121,18 +127,19 @@ body {
   /* width: 1.2rem; */
 }
 
-.rating-state__icon:hover {
-  cursor: pointer;
-  background-color: var(--clr-neutral-200);
-}
-
 .rating-state__header {
   color: var(--clr-neutral-100);
   font-size: 1.8rem;
+  --flow-space: 1.2rem; 
+}
+
+.rating-state__text {
+  --flow-space: 0.5rem; 
 }
 
 .rating-state__buttons {
   justify-content: space-around;
+  --flow-space: 1.3rem; 
   
 }
 
@@ -163,10 +170,11 @@ input[type="radio"]:checked + label {
   display: block;
   width: 100%;
   text-transform: uppercase;
-  padding: 0.5rem 4rem;
+  padding: 0.7rem 4rem;
   border-radius: 30px;
   font-size: 0.85rem;
   letter-spacing: 2px;
+  --flow-space: 1.5rem; 
 } /* generic button styling. would probably be universal to larger project */
 
 .btn--clr-primary-200 {
@@ -180,6 +188,32 @@ input[type="radio"]:checked + label {
   cursor: pointer; 
 }
 
+/* THANK YOU STATE STYLINGS */
+
+.thank-you-state {
+  text-align: center;
+  
+}
+
 .thank-you-state[data-active="false"] {
   display: none;
+}
+
+.selection-text {
+  display: inline-block;
+  color: var(--clr-primary-200);
+  background-color: var(--clr-neutral-600);
+  line-height: 0rem; /* to fix vertical alignment of the text within the circular background */
+  padding: 1rem 1.6rem;
+  border-radius: 30px;
+  --flow-space: 2rem;
+}
+
+.thank-you__header {
+  font-size: 1.8rem;
+  color: var(--clr-neutral-100);
+}
+
+.thank-you__text {
+  --flow-space: 0.6rem;
 }

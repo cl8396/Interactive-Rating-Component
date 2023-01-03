@@ -3,3 +3,19 @@ Do I place a single h1 on the rating state and not the thank you state? Perhaps 
 
 I am going to use data attributes of (data-active="false" and data-active="true") to toggle the contents of 
 the rating card.
+
+
+--
+
+
+Am I naming things correctly (using BEMM as a general guide). Particularly in the 'thank you state'.
+
+Is there a better way of creating the required spacing between elements? Tried using flex but that still does not allow you 
+complete control over the spacing without writing more CSS.
+
+.flow utility class seems to do the job
+
+--
+
+I used hidden radio buttons to allow only one rating 'option' to be selected at once. I styled a related 'label' element to visually 
+represent buttons. Is there a better way?
