@@ -66,6 +66,10 @@ h6 {
   isolation: isolate;
 }
 
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -111,14 +115,20 @@ body {
 }
 
 .rating-state__icon {
-  /* padding: 1rem;
   background-color: var(--clr-neutral-600);
-  border-radius: 100px; */
-  width: 2rem;
+  padding: 1rem;
+  border-radius: 100px; 
+  /* width: 1.2rem; */
+}
+
+.rating-state__icon:hover {
+  cursor: pointer;
+  background-color: var(--clr-neutral-200);
 }
 
 .rating-state__header {
   color: var(--clr-neutral-100);
+  font-size: 1.8rem;
 }
 
 .rating-state__buttons {
