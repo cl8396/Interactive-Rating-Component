@@ -8,14 +8,14 @@ const ratingScoreText = document.querySelector('.rating-score-span');
 const ratingButtons = document.querySelectorAll('input[name="rating-score"]');
 
 
-function submitRating() {
+submitButton.addEventListener('click', () => {
     if (document.querySelector('input[name="rating-score"]:checked') === null) { /* ensures a score is selected */
         alert('please select a score');
         return;
-    } 
-    updateRatingText()
-    changeActiveState()
-}
+    }
+    updateRatingText();
+    changeActiveState();
+})
 
 function updateRatingText() {
     let selectedRating;
@@ -36,5 +36,4 @@ function changeActiveState() {
     return;
 }
 
-submitButton.addEventListener('click', submitRating)
 
