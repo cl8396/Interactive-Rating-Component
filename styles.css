@@ -6,9 +6,6 @@
   --clr-neutral-800: hsl(216, 12%, 8%);
 
   --clr-primary-200: hsl(25, 97%, 53%);
-
- 
-
 }
 
 /*
@@ -66,6 +63,8 @@ h6 {
   isolation: isolate;
 }
 
+/* utilities */
+
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
@@ -83,6 +82,36 @@ h6 {
   margin: 0 auto;
 }
 
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.text-neutral-200 {
+  color: var(--clr-neutral-200);
+}
+
+.text-primary-200 {
+  color: var(--clr-primary-200);
+}
+
+.bg-neutral-800 {
+  background-color: var(--clr-neutral-800);
+}
+
+.bg-neutral-600 {
+  background-color: var(--clr-neutral-600);
+}
+
+.bg-neutral-200 {
+  background-color: var(--clr-neutral-200);
+}
+
+.bg-primary-200 {
+  background-color: var(--clr-primary-200);
+}
+
+/* general styles */
+
 body {
   font-family: 'Overpass', sans-serif;
   font-size: 0.975rem;
@@ -91,24 +120,31 @@ body {
   place-items: center;
 
   background-color: black;
-
 }
+
+.btn {
+  /* generic button styling. would probably be universal to larger project */
+  display: block;
+  width: 100%;
+  
+  padding: 0.7rem 4rem;
+  --flow-space: 1.5rem; 
+  
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  border: none; /* removes border for all browser */
+  border-radius: 30px;
+} 
+
 
 /* RATING STATE STYLINGS */
 
 .rating-card {
-  padding: 2rem;
-  border-radius: 2rem;
-  background-color: var(--clr-neutral-800);
-  color: var(--clr-neutral-200);
+  padding: 2rem; 
   width: 400px;
-
-}
-
-.rating-state {
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius: 2rem;
 }
 
 .rating-state[data-active="true"] {
@@ -120,14 +156,11 @@ body {
 }
 
 .rating-state__icon {
-  background-color: var(--clr-neutral-600);
   padding: 1rem;
   border-radius: 100px; 
-  /* width: 1.2rem; */
 }
 
 .rating-state__header {
-  color: var(--clr-neutral-100);
   font-size: 1.8rem;
   --flow-space: 1.2rem; 
 }
@@ -143,16 +176,20 @@ body {
 }
 
 .rating-state__btn {
-  border: none;
-  background-color: var(--clr-neutral-600);
-  color: var(--clr-neutral-200);
-  width: 50px;
-  aspect-ratio: 1;
-  border-radius: 100px;
+  /* styles the label of hidden radio butons */
   display: flex;
   justify-content: center;
   align-items: center;
-} /* styles the label of hidden radio butons */
+
+  width: 50px;
+  aspect-ratio: 1;
+
+  background-color: var(--clr-neutral-600);
+  color: var(--clr-neutral-200);
+  
+  border-radius: 100px;
+  border: none;
+} 
 
 input[type="radio"]:checked + label { 
   background-color: var(--clr-neutral-200);
@@ -165,18 +202,6 @@ input[type="radio"]:checked + label {
   color: var(--clr-neutral-100);
 }
 
-.btn {
-  display: block;
-  width: 100%;
-  text-transform: uppercase;
-  padding: 0.7rem 4rem;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  --flow-space: 1.5rem; 
-  border: none; /* removes border for all browser */
-} /* generic button styling. would probably be universal to larger project */
-
 .btn--clr-primary-200 {
   background-color: var(--clr-primary-200);
   color: var(--clr-neutral-100);
@@ -188,11 +213,11 @@ input[type="radio"]:checked + label {
   cursor: pointer; 
 }
 
+
 /* THANK YOU STATE STYLINGS */
 
 .thank-you-state {
   text-align: center;
-  
 }
 
 .thank-you-state[data-active="false"] {
@@ -201,17 +226,17 @@ input[type="radio"]:checked + label {
 
 .selection-text {
   display: inline-block;
-  color: var(--clr-primary-200);
-  background-color: var(--clr-neutral-600);
-  line-height: 0rem; /* to fix vertical alignment of the text within the circular background */
+
   padding: 1rem 1.6rem;
+
+  line-height: 0rem; /* to fix vertical alignment of the text within the circular background */
+  
   border-radius: 30px;
   --flow-space: 2rem;
 }
 
 .thank-you__header {
   font-size: 1.8rem;
-  color: var(--clr-neutral-100);
 }
 
 .thank-you__text {
