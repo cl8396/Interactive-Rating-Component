@@ -6,6 +6,9 @@
   --clr-neutral-800: hsl(216, 12%, 8%);
 
   --clr-primary-200: hsl(25, 97%, 53%);
+
+  --fs-large: 1.8rem;
+	--fs-
 }
 
 /*
@@ -110,6 +113,8 @@ h6 {
   background-color: var(--clr-primary-200);
 }
 
+
+
 /* general styles */
 
 body {
@@ -143,7 +148,7 @@ body {
 
 .rating-card {
   padding: 2rem; 
-  width: 400px;
+  width: min(80%, 400px);
   border-radius: 2rem;
 }
 
@@ -172,7 +177,6 @@ body {
 .rating-state__buttons {
   justify-content: space-around;
   --flow-space: 1.3rem; 
-  
 }
 
 .rating-state__btn {
@@ -213,7 +217,6 @@ input[type="radio"]:checked + label {
   cursor: pointer; 
 }
 
-
 /* THANK YOU STATE STYLINGS */
 
 .thank-you-state {
@@ -241,4 +244,49 @@ input[type="radio"]:checked + label {
 
 .thank-you__text {
   --flow-space: 0.6rem;
+}
+
+@media screen and (max-width: 380px) {
+	body {
+		font-size: 0.9rem;
+	}
+
+	.rating-card {
+		padding: 1.5rem; 
+	}
+	.rating-state__icon {
+		padding: 0.6rem;
+		border-radius: 100px; 
+	  }
+
+	.rating-state__header {
+		font-size: 1.6rem;
+		--flow-space: 0.8rem; 
+	}
+
+	.rating-state__buttons {
+		justify-content: space-around;
+		--flow-space: 0.8rem; 
+	}
+	
+	.btn {
+		display: block;
+		width: 100%;
+		
+		padding: 0.6rem 3rem;
+		--flow-space: 1.5rem; 
+		
+		font-size: 0.75rem;
+		letter-spacing: 1px;
+  	}
+		
+		.thank-you__header {
+			font-size: 1.6rem;
+			--flow-space: 0.8rem;
+		}
+
+		.selection-text {
+			border-radius: 30px;
+			--flow-space: 1.4rem;
+		} 
 }
