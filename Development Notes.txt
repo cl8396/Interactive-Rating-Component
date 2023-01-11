@@ -19,3 +19,7 @@ complete control over the spacing without writing more CSS.
 
 I used hidden radio buttons to allow only one rating 'option' to be selected at once. I styled a related 'label' element to visually 
 represent buttons. Is there a better way?
+
+--
+
+Responsivness. My media rule seems very clunky and inelegant. Better way?
